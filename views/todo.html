@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <title>${this.escapeHtml(this.title)}</title>
-    ${this.load('/partials/head.html')}
+    ${this.load('/sw-renderer/partials/head.html')}
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      ${this.load('/partials/header.html')}
+      ${this.load('/sw-renderer/partials/header.html')}
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -27,7 +27,7 @@
             </div>
           </section>
         </div>
-        ${this.load('/partials/footer.html')}
+        ${this.load('/sw-renderer/partials/footer.html')}
       </main>
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
