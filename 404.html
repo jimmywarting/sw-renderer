@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+</head>
+<body>
+  <script>
+    function log(msg) {
+      var p = document.createElement('p')
+      p.textContent = msg
+      document.body.appendChild(p)
+    }
+
+    window.onerror = function(msg){ log(msg) }
+
+    if (!navigator.serviceWorker || !'ReadableStream' in window) {
+      log('Please try Chrome, your browser don\'t have Service worker or streaming support.')
+    } else {
+      var reloading = false
+      navigator.serviceWorker.addEventListener('controllerchange', function() {
+        if (reloading) return
+        reloading = true
+        location.reload()
+      })
+
+      navigator.serviceWorker.register('/sw.js').then(() => location.reload(), log)
+    }
+  </script>
+</body>
+</html>

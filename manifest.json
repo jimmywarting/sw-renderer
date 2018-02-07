@@ -1,0 +1,52 @@
+{
+  "name": "HackerWeb",
+  "short_name": "HackerWeb",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#512DA8",
+  "orientation": "portrait",
+  "description": "A simply readable HackerWeb app.",
+  "icons": [
+    {
+      "src": "/img/launcher-icon-0-75x.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/launcher-icon-1x.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/launcher-icon-1-5x.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/launcher-icon-2x.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/launcher-icon-3x.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/launcher-icon-4x.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/launcher-icon-4x.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "prefer_related_applications": true,
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+  }]
+}
