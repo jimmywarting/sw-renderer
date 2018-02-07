@@ -7,8 +7,8 @@ importScripts('js/scope.js')
 toolbox.precache([
   'https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
-  '/css/material.min.css',
-  '/css/main.css'
+  '/sw-renderer/css/material.min.css',
+  '/sw-renderer/css/main.css'
 ])
 
 
@@ -25,7 +25,7 @@ function fetchAndStore(req) {
 *******************************************************/
 
 // Home page
-router.get('/', async (request, values) => {
+router.get('/sw-renderer/', async (request, values) => {
   const template = await fetchAndStore('/views/index.html').then(r => r.text())
   const headers = {'Content-Type': 'text/html'}
 
@@ -33,7 +33,7 @@ router.get('/', async (request, values) => {
 })
 
 // Todo page
-router.get('/todo', async (request, values) => {
+router.get('/sw-renderer/todo', async (request, values) => {
   const template = await fetchAndStore(`/views/todo.html`).then(r => r.text())
   const headers = {'Content-Type': 'text/html'}
 
@@ -41,7 +41,7 @@ router.get('/todo', async (request, values) => {
 })
 
 // Adding todo
-router.post('/add-todo', async (request, values) => {
+router.post('/sw-renderer/add-todo', async (request, values) => {
   return Response.redirect('/')
 })
 
