@@ -29,6 +29,7 @@ function tpl(strings, ...values) {
       // e.g. if you did this in template:
       // `fetch(url).then(res => res.body)`
       // it would start to stream it's content
+      // loading a partial also returns a ReadableStream
       if (value.getReader) {
         // equvulant to stream.pipeTo(dest)
         let reader = value.getReader()
