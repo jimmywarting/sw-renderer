@@ -26,7 +26,7 @@ function fetchAndStore(req) {
 
 // Home page
 router.get('/sw-renderer/', async (request, values) => {
-  const template = await fetchAndStore('/views/index.html').then(r => r.text())
+  const template = await fetchAndStore('/sw-renderer/views/index.html').then(r => r.text())
   const headers = {'Content-Type': 'text/html'}
 
   return new Response(new Scope('Skeleton app', template), {headers})
@@ -34,7 +34,7 @@ router.get('/sw-renderer/', async (request, values) => {
 
 // Todo page
 router.get('/sw-renderer/todo', async (request, values) => {
-  const template = await fetchAndStore(`/views/todo.html`).then(r => r.text())
+  const template = await fetchAndStore(`/sw-renderer/views/todo.html`).then(r => r.text())
   const headers = {'Content-Type': 'text/html'}
 
   return new Response(new Scope('Todos', template), {headers})
